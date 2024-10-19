@@ -1,0 +1,22 @@
+# Arquivos específicos do Eclipse
+.classpath
+.project
+.settings/
+
+# Arquivos compilados
+target/
+
+# Arquivos de IDE (se usar IntelliJ IDEA, adicione também)
+.idea/
+
+# Arquivos específicos do sistema operacional
+*.DS_Store
+Thumbs.db
+
+# Logs e arquivos temporários
+*.log
+temp/
+
+# Senhas e informações sensíveis (NUNCA adicione ao Git)
+*.keystore
+*.properties*
