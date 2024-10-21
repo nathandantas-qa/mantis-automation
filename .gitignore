@@ -5,6 +5,7 @@
 
 # Arquivos compilados
 target/
+test-output/
 
 # Arquivos de IDE (se usar IntelliJ IDEA, adicione também)
 .idea/

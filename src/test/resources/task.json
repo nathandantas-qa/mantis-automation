@@ -1,3 +1,14 @@
 {
-    "createTaskWithMandatoryFieldsOnly": { "category": "[Todos os Projetos] categoria teste", "summary": "Tarefa 1", "description": "Descrição da tarefa 1" }    
+  "createTaskWithMandatoryFieldsOnly": {
+    "pt": {
+      "category": "[Todos os Projetos] categoria teste",
+      "summary": "Tarefa 1",
+      "description": "Descrição da tarefa 1"
+    },
+    "en": {
+      "category": "[All Projects] categoria teste",
+      "summary": "Task 1",
+      "description": "Task description 1"
+    }
+  }
 }

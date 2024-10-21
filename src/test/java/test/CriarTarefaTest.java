@@ -25,15 +25,17 @@ public class CriarTarefaTest extends BaseWeb {
 	String description;
 	private Task task;
 	MessageLoader messageLoader;
+	String language;
 
 	@BeforeClass
 	public void setUp() {
 		username = TestConfig.getUsername();
 		password = TestConfig.getPassword();
+		language = ConfigurationManager.configuration().getLanguage();
 		createTaskWithMandatoryFieldsOnly = new TaskLoader();
-		String category = createTaskWithMandatoryFieldsOnly.getTask("createTaskWithMandatoryFieldsOnly", "category");
-		String summary = createTaskWithMandatoryFieldsOnly.getTask("createTaskWithMandatoryFieldsOnly", "summary"); 
-		String description = createTaskWithMandatoryFieldsOnly.getTask("createTaskWithMandatoryFieldsOnly", "description");
+		String category = createTaskWithMandatoryFieldsOnly.getTaskProperty("createTaskWithMandatoryFieldsOnly",language, "category");
+		String summary = createTaskWithMandatoryFieldsOnly.getTaskProperty("createTaskWithMandatoryFieldsOnly", language,"summary"); 
+		String description = createTaskWithMandatoryFieldsOnly.getTaskProperty("createTaskWithMandatoryFieldsOnly",language, "description");
 		task = new Task( category, summary, description);
 		messageLoader = new MessageLoader();
 	}
@@ -42,7 +44,7 @@ public class CriarTarefaTest extends BaseWeb {
 	
 	@Test(description = "CT03 - Criar tarefa com campos obrigatórios ")
 	public void createTaskTest03() {
-		String language = ConfigurationManager.configuration().getLanguage();
+		
 		String expected = messageLoader.getMessage("createTaskSuccess", language);
 		
 		performLogin(username, password);
