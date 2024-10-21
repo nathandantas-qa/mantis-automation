@@ -41,7 +41,7 @@ public class TaskPage  extends NavigationPage{
 	
 	@Step
 	public void selectedCategory(String value) {
-		Select dropdown = new Select(category);
+		Select dropdown = new Select(wait.waitElementToBeClickableWithShouldRetry(category));
 		dropdown.selectByVisibleText(value);
     }	
 	@Step
