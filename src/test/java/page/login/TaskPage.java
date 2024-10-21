@@ -42,7 +42,10 @@ public class TaskPage  extends NavigationPage{
 	@Step
 	public void selectedCategory(String value) {
 		Select dropdown = new Select(wait.waitElementToBeClickableWithShouldRetry(category));
-		dropdown.selectByVisibleText(value);
+		for (WebElement option : dropdown.getOptions()) {
+	        System.out.println("Option value: " + option.getAttribute("value") + ", text: " + option.getText());
+	    }
+		dropdown.selectByIndex(2);
     }	
 	@Step
 	public void fillSummary(String value) {
